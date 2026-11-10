@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Gabriel Endam’Engone, développeur front-end et designer UI à Casablanca. Découvrez son portfolio et contactez-le pour vos projets web.">
+  <meta name="author" content="Gabriel Endam’Engone">
+  <meta name="theme-color" content="#0b1114">
+  <meta name="color-scheme" content="dark light">
+
+  <!-- URL et image à garder cohérentes avec l’adresse publique de cette carte après sa mise en ligne. -->
+  <link rel="canonical" href="https://gabrielhalim-dev.com/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Gabriel Endam’Engone — Développeur front-end & designer UI">
+  <meta property="og:description" content="Développeur front-end et designer UI à Casablanca. Portfolio, coordonnées et liens directs.">
+  <meta property="og:image" content="https://gabrielhalim-dev.com/img/gabriel-portrait-2026.png">
+  <meta property="og:image:alt" content="Portrait de Gabriel Endam’Engone">
+  <meta property="og:url" content="https://gabrielhalim-dev.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gabriel Endam’Engone — Développeur front-end & designer UI">
+  <meta name="twitter:description" content="Développeur front-end et designer UI à Casablanca. Portfolio, coordonnées et liens directs.">
+  <meta name="twitter:image" content="https://gabrielhalim-dev.com/img/gabriel-portrait-2026.png">
+  <meta name="twitter:image:alt" content="Portrait de Gabriel Endam’Engone">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22%3E%3Crect width=%22512%22 height=%22512%22 rx=%22120%22 fill=%22%230b1114%22/%3E%3Cg transform=%22translate(36 40)%22 fill=%22%23ffffff%22%3E%3Cpath d=%22M70 314V106h66v142Z%22/%3E%3Cpath d=%22M164 314V164h66v84Z%22/%3E%3Cpath d=%22M258 314V70h112v66h-46v112Z%22/%3E%3C/g%3E%3C/svg%3E">
+  <title>Gabriel Endam’Engone — Développeur front-end & designer UI</title>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Gabriel Endam’Engone",
+      "jobTitle": "Développeur front-end et designer UI",
+      "url": "https://gabrielhalim-dev.com/",
+      "image": "https://gabrielhalim-dev.com/img/gabriel-portrait-2026.png",
+      "email": "mailto:gabrielendamengone@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Casablanca",
+        "addressCountry": "MA"
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --page: #0b1114;
+      --surface: #111a1e;
+      --surface-raised: #172328;
+      --surface-hover: #1d2b30;
+      --text: #f1f6f5;
+      --muted: #a3b2b4;
+      --line: rgba(226, 239, 238, .11);
+      --accent: #79d8c1;
+      --accent-ink: #08211c;
+      --status: #7ad6a2;
+      --focus: #9ae7d6;
+      --brand-ink: #ffffff;
+      --shadow: 0 28px 84px rgba(0, 0, 0, .3);
+    }
+
+    :root[data-theme="light"] {
+      color-scheme: light;
+      --page: #edf2f1;
+      --surface: #fbfdfc;
+      --surface-raised: #f0f5f3;
+      --surface-hover: #e5efec;
+      --text: #142226;
+      --muted: #52666a;
+      --line: rgba(16, 40, 44, .12);
+      --accent: #176b5d;
+      --accent-ink: #ffffff;
+      --status: #168354;
+      --focus: #075f53;
+      --brand-ink: #071d32;
+      --shadow: 0 24px 70px rgba(19, 47, 47, .12);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { min-width: 320px; background: var(--page); }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      padding: max(18px, env(safe-area-inset-top)) 18px calc(112px + env(safe-area-inset-bottom));
+      background: var(--page);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      transition: background-color .25s ease, color .25s ease;
+    }
+
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    button { color: inherit; font: inherit; }
+
+    a { color: inherit; }
+
+    :focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 4px;
+    }
+
+    .icon-library {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .page-shell {
+      width: min(100%, 540px);
+      margin: 0 auto;
+    }
+
+    .contact-card {
+      position: relative;
+      overflow: hidden;
+      padding: 20px 20px 24px;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      transition: background-color .25s ease, border-color .25s ease;
+    }
+
+    .contact-card::before {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: 68px;
+      height: 2px;
+      background: var(--accent);
+      content: "";
+    }
+
+    .utility-bar {
+      display: flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 34px;
+    }
+
+    .brand-lockup {
+      display: inline-flex;
+      min-width: 0;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: block;
+      width: 38px;
+      height: 38px;
+      flex: 0 0 auto;
+      padding: 6px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface-raised);
+    }
+
+    .brand-mark .brand-shape { fill: var(--brand-ink); }
+
+    .brand-mark .brand-accent { fill: var(--brand-ink); }
+
+    .brand-copy { display: grid; gap: 0; line-height: 1.1; }
+
+    .brand-copy strong {
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: .09em;
+    }
+
+    .brand-copy span {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .utility-actions { display: flex; align-items: center; gap: 8px; }
+
+    .languages {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      padding: 3px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface-raised);
+    }
+
+    .languages button, .theme-toggle {
+      display: inline-grid;
+      min-width: 44px;
+      min-height: 44px;
+      place-items: center;
+      padding: 0 9px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+      transition: background-color .2s ease, color .2s ease, transform .2s ease;
+    }
+
+    .languages button[aria-pressed="true"] {
+      background: var(--surface-hover);
+      color: var(--text);
+    }
+
+    .theme-toggle {
+      width: 44px;
+      padding: 0;
+      border: 1px solid var(--line);
+      background: var(--surface-raised);
+    }
+
+    .theme-toggle:hover, .languages button:hover { color: var(--text); }
+
+    .profile { text-align: center; }
+
+    .portrait-frame {
+      position: relative;
+      display: grid;
+      width: 128px;
+      height: 128px;
+      place-items: center;
+      margin: 0 auto 22px;
+      border: 1px solid rgba(121, 216, 193, .48);
+      border-radius: 50%;
+      background: var(--surface-raised);
+      box-shadow: 0 12px 38px rgba(0, 0, 0, .24);
+    }
+
+    .portrait-frame::after {
+      position: absolute;
+      right: 3px;
+      bottom: 5px;
+      width: 15px;
+      height: 15px;
+      border: 3px solid var(--surface);
+      border-radius: 50%;
+      background: var(--status);
+      content: "";
+    }
+
+    .avatar {
+      display: block;
+      width: 112px;
+      height: 112px;
+      border: 2px solid var(--surface);
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+    }
+
+    .availability {
+      display: inline-flex;
+      min-height: 32px;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 14px;
+      padding: 4px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface-raised);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .availability-dot {
+      width: 7px;
+      height: 7px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: var(--status);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--status) 15%, transparent);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 10vw, 48px);
+      font-weight: 720;
+      letter-spacing: -.055em;
+      line-height: .99;
+    }
+
+    h1 span { display: block; }
+
+    .role {
+      margin: 17px 0 0;
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -.015em;
+    }
+
+    .city {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .city .icon { color: var(--accent); }
+
+    .bio {
+      max-width: 39ch;
+      margin: 17px auto 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .link-section { margin-top: 35px; }
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 0 2px 12px;
+      font-size: 13px;
+      font-weight: 650;
+      letter-spacing: .01em;
+    }
+
+    .section-heading span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .link-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-link {
+      display: flex;
+      min-width: 0;
+      min-height: 62px;
+      align-items: center;
+      gap: 13px;
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: var(--surface-raised);
+      color: var(--text);
+      text-decoration: none;
+      transition: transform .2s ease, border-color .2s ease, background-color .2s ease;
+    }
+
+    .contact-link:hover {
+      transform: translateY(-1px);
+      border-color: color-mix(in srgb, var(--accent) 44%, var(--line));
+      background: var(--surface-hover);
+    }
+
+    .link-icon-wrap {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      flex: 0 0 auto;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--accent);
+    }
+
+    .link-copy {
+      display: grid;
+      min-width: 0;
+      gap: 1px;
+      line-height: 1.35;
+    }
+
+    .link-label { font-size: 14px; font-weight: 650; }
+
+    .link-detail {
+      overflow: hidden;
+      color: var(--muted);
+      font-size: 12px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .link-arrow {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 auto;
+      margin-left: auto;
+      color: var(--muted);
+      transition: color .2s ease, transform .2s ease;
+    }
+
+    .contact-link:hover .link-arrow { transform: translate(2px, -2px); color: var(--accent); }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 29px;
+      padding-top: 17px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .card-footer span:last-child { text-align: right; }
+
+    .icon {
+      display: block;
+      width: 19px;
+      height: 19px;
+      flex: 0 0 auto;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.7;
+    }
+
+    .icon-fill { fill: currentColor; stroke: none; }
+
+    .action-dock {
+      position: fixed;
+      z-index: 5;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 12px 18px max(12px, env(safe-area-inset-bottom));
+      border-top: 1px solid var(--line);
+      background: color-mix(in srgb, var(--page) 92%, transparent);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .action-dock-inner {
+      display: grid;
+      width: min(100%, 500px);
+      grid-template-columns: 1fr 1fr 48px;
+      gap: 9px;
+      margin: 0 auto;
+    }
+
+    .action-button, .print-button {
+      display: inline-flex;
+      min-width: 44px;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface-raised);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 650;
+      transition: transform .2s ease, background-color .2s ease, border-color .2s ease;
+    }
+
+    .action-button:hover, .print-button:hover {
+      transform: translateY(-1px);
+      border-color: color-mix(in srgb, var(--accent) 42%, var(--line));
+      background: var(--surface-hover);
+    }
+
+    .action-button:active, .print-button:active { transform: translateY(0); }
+
+    .action-button.primary {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: var(--accent-ink);
+    }
+
+    .action-button.primary:hover { background: color-mix(in srgb, var(--accent) 88%, white); }
+
+    .action-button .icon, .print-button .icon { width: 18px; height: 18px; }
+
+    .save-label-compact { display: none; }
+
+    .print-button { width: 50px; padding: 0; }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      clip-path: inset(50%);
+    }
+
+    .toast {
+      position: fixed;
+      z-index: 10;
+      right: 18px;
+      bottom: calc(86px + env(safe-area-inset-bottom));
+      left: 18px;
+      width: fit-content;
+      max-width: min(420px, calc(100vw - 36px));
+      margin: 0 auto;
+      padding: 11px 16px;
+      transform: translateY(8px);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--text);
+      color: var(--page);
+      font-size: 13px;
+      font-weight: 650;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .toast.is-visible { transform: translateY(0); opacity: 1; }
+
+    @media (min-width: 560px) {
+      body { padding-top: max(40px, env(safe-area-inset-top)); }
+      .contact-card { padding: 23px 30px 27px; border-radius: 30px; }
+      .contact-card::before { left: 30px; width: 82px; }
+      .utility-bar { margin-bottom: 39px; }
+      .profile { text-align: left; }
+      .profile-main { display: flex; align-items: center; gap: 23px; }
+      .portrait-frame { width: 128px; height: 128px; flex: 0 0 auto; margin: 0; }
+      .profile-copy { min-width: 0; }
+      .availability { margin-bottom: 12px; }
+      h1 { font-size: clamp(38px, 6.2vw, 50px); }
+      .role { margin-top: 14px; }
+      .bio { max-width: 42ch; margin-left: 0; }
+      .link-section { margin-top: 38px; }
+    }
+
+    @media (max-width: 359px) {
+      body { padding-right: 12px; padding-left: 12px; }
+      .contact-card { padding-right: 15px; padding-left: 15px; }
+      .contact-card::before { left: 15px; }
+      .brand-copy strong { font-size: 10px; }
+      .utility-actions { gap: 5px; }
+      .languages button { min-width: 44px; }
+      .contact-link { gap: 10px; padding-right: 10px; padding-left: 10px; }
+      .action-dock-inner { grid-template-columns: 1fr 1fr 44px; gap: 6px; }
+      .action-button { gap: 4px; padding-right: 5px; padding-left: 5px; font-size: 11px; }
+    }
+
+    @media (max-width: 420px) {
+      .utility-bar { flex-wrap: wrap; row-gap: 10px; }
+      .brand-lockup { min-width: 130px; }
+      .brand-copy { min-width: 0; }
+      .brand-copy strong { font-size: 10px; letter-spacing: .04em; white-space: nowrap; }
+      .utility-actions { margin-left: auto; }
+      .save-label-full { display: none; }
+      .save-label-compact { display: inline; }
+    }
+
+    @media (min-width: 900px) {
+      body { padding-bottom: 40px; }
+      .action-dock {
+        position: static;
+        width: min(100%, 540px);
+        margin: 14px auto 0;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
+      .action-dock-inner { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+
+    @media print {
+      :root, :root[data-theme="light"] {
+        color-scheme: light;
+        --page: #ffffff;
+        --surface: #ffffff;
+        --surface-raised: #ffffff;
+        --surface-hover: #ffffff;
+        --text: #111a1c;
+        --muted: #3c4d50;
+        --line: #d2dcda;
+        --accent: #176b5d;
+        --brand-ink: #071d32;
+        --shadow: none;
+      }
+
+      body { min-height: 0; padding: 0; background: #fff; }
+      .page-shell { width: 100%; max-width: 540px; }
+      .contact-card { border: 1px solid #d2dcda; box-shadow: none; }
+      .utility-bar, .action-dock, .toast { display: none !important; }
+      .contact-link { break-inside: avoid; }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Symboles SVG réutilisés pour garder une interface légère et cohérente. -->
+  <svg class="icon-library" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-portfolio" viewBox="0 0 24 24">
+      <rect x="3.5" y="4.5" width="17" height="15" rx="2.5" />
+      <path d="M8 8h8M8 12h5M8 16h3" />
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+      <path d="M5 9v10M5 5.5v.1M10 19v-6a4 4 0 0 1 8 0v6M10 10v9" />
+      <circle cx="5" cy="5.5" r="1" class="icon-fill" />
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.8" r=".8" class="icon-fill" />
+    </symbol>
+    <symbol id="icon-tiktok" viewBox="0 0 24 24">
+      <path d="M14 4v10.3a3.8 3.8 0 1 1-3.1-3.7M14 4c.5 2.8 2.4 4.6 5 4.9" />
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <path d="M7 3.8 9.8 8l-1.7 1.8a14 14 0 0 0 6.1 6.1l1.8-1.7 4.2 2.8-.6 3.1a2 2 0 0 1-2.2 1.6C9.6 20.8 3.2 14.4 2.3 6.6A2 2 0 0 1 3.9 4.4L7 3.8Z" />
+    </symbol>
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+      <path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L3 20l1.2-4.8a8.2 8.2 0 1 1 16-3.5Z" />
+      <path d="M8.4 8.2c.4 2.4 2.3 4.6 5.1 5.7l1.5-1 2 1.1-.2 1.5c-.1.7-.8 1.2-1.5 1.1-4.2-.7-7.6-4-8.3-8.1-.1-.7.4-1.4 1.1-1.6l1.4-.3 1.2 2-1 1.6" />
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="m4 7 8 6 8-6" />
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" />
+      <circle cx="12" cy="10" r="2.2" />
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+      <path d="M7 17 17 7M8 7h9v9" />
+    </symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24">
+      <path d="M12 3v11m0 0 4-4m-4 4-4-4M4 17v3h16v-3" />
+    </symbol>
+    <symbol id="icon-share" viewBox="0 0 24 24">
+      <circle cx="18" cy="5" r="2.5" />
+      <circle cx="6" cy="12" r="2.5" />
+      <circle cx="18" cy="19" r="2.5" />
+      <path d="m8.2 10.8 7.5-4.4m-7.5 6.8 7.5 4.4" />
+    </symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+    </symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24">
+      <path d="M20.2 15.3A8.6 8.6 0 0 1 8.7 3.8 8.7 8.7 0 1 0 20.2 15.3Z" />
+    </symbol>
+    <symbol id="icon-print" viewBox="0 0 24 24">
+      <path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2" />
+      <path d="M7 14h10v7H7zM17 11h.01" />
+    </symbol>
+  </svg>
+
+  <main class="page-shell">
+    <article class="contact-card" aria-labelledby="profile-name">
+      <header>
+        <nav class="utility-bar" aria-label="Préférences de la carte">
+          <a class="brand-lockup" href="https://gabrielhalim-dev.com/" target="_blank" rel="noopener noreferrer" aria-label="Portfolio de Gabriel Halim">
+            <!-- Symbole Élan choisi pour l’identité de marque de Gabriel Halim. -->
+            <svg class="brand-mark" viewBox="0 0 512 512" role="img" aria-label="Logo Élan">
+              <g transform="translate(36 40)">
+                <path class="brand-shape" d="M70 314V106h66v142Z" />
+                <path class="brand-shape" d="M164 314V164h66v84Z" />
+                <path class="brand-accent" d="M258 314V70h112v66h-46v112Z" />
+              </g>
+            </svg>
+            <span class="brand-copy" aria-hidden="true">
+              <strong>GABRIEL HALIM</strong>
+              <span>Solutions digitales</span>
+            </span>
+          </a>
+
+          <div class="utility-actions">
+            <div class="languages" role="group" aria-label="Choisir la langue">
+              <button id="lang-fr" type="button" aria-label="Français" aria-pressed="true">FR</button>
+              <button id="lang-en" type="button" aria-label="English" aria-pressed="false">EN</button>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activer le mode clair" title="Activer le mode clair">
+              <svg class="icon" aria-hidden="true"><use href="#icon-sun"></use></svg>
+            </button>
+          </div>
+        </nav>
+
+        <div class="profile">
+          <div class="profile-main">
+            <div class="portrait-frame">
+              <img src="img/gabriel-portrait-2026.png" alt="Gabriel Endam’Engone" class="avatar" id="avatar" width="112" height="112" fetchpriority="high">
+            </div>
+            <div class="profile-copy">
+              <p class="availability"><span class="availability-dot" aria-hidden="true"></span><span id="availability-text">Disponible pour de nouveaux projets</span></p>
+              <h1 id="profile-name"><span id="first-name">Gabriel</span><span id="last-name">Endam’Engone</span></h1>
+              <p class="role" id="profile-role">Développeur front-end et designer UI</p>
+              <p class="city"><svg class="icon" aria-hidden="true"><use href="#icon-pin"></use></svg><span id="profile-city">Casablanca, Maroc</span></p>
+            </div>
+          </div>
+          <p class="bio" id="profile-bio">Je conçois des expériences web claires et soignées, du premier écran aux derniers détails.</p>
+        </div>
+      </header>
+
+      <section class="link-section" aria-labelledby="work-heading">
+        <h2 class="section-heading" id="work-heading">Découvrir <span>Portfolio & réseaux</span></h2>
+        <ul class="link-list" id="work-links"></ul>
+      </section>
+
+      <section class="link-section" aria-labelledby="contact-heading">
+        <h2 class="section-heading" id="contact-heading">Me contacter <span>Liens directs</span></h2>
+        <ul class="link-list" id="contact-links"></ul>
+      </section>
+
+      <footer class="card-footer">
+        <span id="footer-name">Gabriel Endam’Engone</span>
+        <span id="footer-location">Casablanca · Maroc</span>
+      </footer>
+    </article>
+  </main>
+
+  <div class="action-dock" role="group" aria-label="Actions de la carte">
+    <div class="action-dock-inner">
+      <button class="action-button primary" id="save-contact" type="button">
+        <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
+        <span class="save-label-full" id="save-label">Enregistrer le contact</span>
+        <span class="save-label-compact" id="save-label-compact" aria-hidden="true">Enregistrer</span>
+      </button>
+      <button class="action-button" id="share-card" type="button">
+        <svg class="icon" aria-hidden="true"><use href="#icon-share"></use></svg>
+        <span id="share-label">Partager</span>
+      </button>
+      <button class="print-button" id="print-card" type="button" aria-label="Imprimer la carte" title="Imprimer la carte">
+        <svg class="icon" aria-hidden="true"><use href="#icon-print"></use></svg>
+        <span class="sr-only" id="print-label">Imprimer</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script>
+    /*
+     * Coordonnées et liens personnalisables — remplacez ces valeurs au besoin.
+     * Pour les réseaux, une ligne s’affiche dès qu’une URL de profil est renseignée.
+     */
+    const PROFILE = {
+      firstName: "Gabriel",
+      lastName: "Endam’Engone",
+      roleFr: "Développeur front-end et designer UI",
+      roleEn: "Front-end developer and UI designer",
+      cityFr: "Casablanca, Maroc",
+      cityEn: "Casablanca, Morocco",
+      bioFr: "Je conçois des expériences web claires et soignées, du premier écran aux derniers détails.",
+      bioEn: "I design clear, thoughtful web experiences, from the first screen to the final detail.",
+
+      /* Téléphone principal, au format international sans le zéro national. */
+      phone: "+212674346915",
+      phoneDisplay: "+212 674 346 915",
+
+      /* Adresse utilisée pour le lien e-mail et la fiche vCard. */
+      email: "gabrielendamengone@gmail.com",
+      emailDisplay: "gabrielhalimengone@gmail.com",
+
+      /* Numéros WhatsApp fournis par Gabriel; les liens wa.me sont générés automatiquement. */
+      whatsapp: [
+        { number: "+24107119210", display: "+241 07 11 92 10", regionFr: "Gabon", regionEn: "Gabon" },
+        { number: "+212674346915", display: "+212 674 346 915", regionFr: "Maroc", regionEn: "Morocco" }
+      ],
+
+      portfolio: "https://gabrielhalim-dev.com/",
+      portfolioDisplay: "gabrielhalim-dev.com",
+
+      /* URL de profil non confirmées dans le dossier : ajoutez-les ici pour les afficher. */
+      linkedin: "",
+      linkedinDisplay: "",
+      instagram: "",
+      instagramDisplay: "",
+      tiktok: "",
+      tiktokDisplay: "",
+
+      photo: "img/gabriel-portrait-2026.png",
+    };
+
+    const TEXT = {
+      fr: {
+        availability: "Disponible pour de nouveaux projets",
+        role: PROFILE.roleFr,
+        city: PROFILE.cityFr,
+        bio: PROFILE.bioFr,
+        workHeading: "Découvrir",
+        workHint: "Portfolio & réseaux",
+        contactHeading: "Me contacter",
+        contactHint: "Liens directs",
+        labels: {
+          portfolio: "Portfolio",
+          linkedin: "LinkedIn",
+          instagram: "Instagram",
+          tiktok: "TikTok",
+          phone: "Téléphone",
+          whatsapp: "WhatsApp",
+          email: "E-mail"
+        },
+        save: "Enregistrer le contact",
+        saveShort: "Enregistrer",
+        share: "Partager",
+        print: "Imprimer la carte",
+        themeToLight: "Activer le mode clair",
+        themeToDark: "Activer le mode sombre",
+        saved: "Fiche contact enregistrée.",
+        copied: "Lien de la carte copié.",
+        shared: "Carte partagée.",
+        shareText: "Voici ma carte de contact numérique.",
+        shareUnavailable: "Copiez le lien de cette page pour le partager.",
+        footerCity: "Casablanca · Maroc"
+      },
+      en: {
+        availability: "Open to new projects",
+        role: PROFILE.roleEn,
+        city: PROFILE.cityEn,
+        bio: PROFILE.bioEn,
+        workHeading: "Explore",
+        workHint: "Portfolio & social",
+        contactHeading: "Get in touch",
+        contactHint: "Direct links",
+        labels: {
+          portfolio: "Portfolio",
+          linkedin: "LinkedIn",
+          instagram: "Instagram",
+          tiktok: "TikTok",
+          phone: "Phone",
+          whatsapp: "WhatsApp",
+          email: "Email"
+        },
+        save: "Save contact",
+        saveShort: "Save",
+        share: "Share",
+        print: "Print the card",
+        themeToLight: "Switch to light mode",
+        themeToDark: "Switch to dark mode",
+        saved: "Contact card saved.",
+        copied: "Card link copied.",
+        shared: "Card shared.",
+        shareText: "Here is my digital contact card.",
+        shareUnavailable: "Copy this page link to share it.",
+        footerCity: "Casablanca · Morocco"
+      }
+    };
+
+    const ICON_BY_KEY = {
+      portfolio: "portfolio",
+      linkedin: "linkedin",
+      instagram: "instagram",
+      tiktok: "tiktok",
+      phone: "phone",
+      whatsapp: "whatsapp",
+      email: "mail"
+    };
+
+    function readPreference(key, fallback) {
+      try { return localStorage.getItem(key) || fallback; }
+      catch (error) { return fallback; }
+    }
+
+    function savePreference(key, value) {
+      try { localStorage.setItem(key, value); }
+      catch (error) { /* La carte reste utilisable si le navigateur bloque le stockage local. */ }
+    }
+
+    let language = readPreference("contact-card-language", (navigator.language || "fr").slice(0, 2) === "en" ? "en" : "fr");
+    if (!TEXT[language]) language = "fr";
+    let theme = readPreference("contact-card-theme", "dark");
+    if (theme !== "light" && theme !== "dark") theme = "dark";
+    let toastTimer;
+
+    function makeIcon(name, className) {
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttribute("class", className ? "icon " + className : "icon");
+      svg.setAttribute("aria-hidden", "true");
+      const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
+      use.setAttribute("href", "#icon-" + name);
+      svg.appendChild(use);
+      return svg;
+    }
+
+    function createLink(item, translations) {
+      const link = document.createElement("a");
+      const iconWrap = document.createElement("span");
+      const copy = document.createElement("span");
+      const label = document.createElement("span");
+      const detail = document.createElement("span");
+      const opensNewTab = /^https?:/i.test(item.href);
+
+      link.className = "contact-link";
+      link.href = item.href;
+      link.setAttribute("aria-label", translations.labels[item.key] + " — " + item.display);
+      if (opensNewTab) {
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      }
+
+      iconWrap.className = "link-icon-wrap";
+      iconWrap.appendChild(makeIcon(ICON_BY_KEY[item.key]));
+      copy.className = "link-copy";
+      label.className = "link-label";
+      label.textContent = item.label || translations.labels[item.key];
+      detail.className = "link-detail";
+      detail.textContent = item.display;
+      copy.append(label, detail);
+      link.append(iconWrap, copy, makeIcon("arrow", "link-arrow"));
+      return link;
+    }
+
+    function renderList(target, items, translations) {
+      const list = document.getElementById(target);
+      list.replaceChildren();
+      items.filter(function (item) { return item.href && item.display; }).forEach(function (item) {
+        const row = document.createElement("li");
+        row.appendChild(createLink(item, translations));
+        list.appendChild(row);
+      });
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("is-visible");
+      window.clearTimeout(toastTimer);
+      toastTimer = window.setTimeout(function () { toast.classList.remove("is-visible"); }, 2400);
+    }
+
+    function render() {
+      const t = TEXT[language];
+      const root = document.documentElement;
+      root.lang = language;
+      root.dataset.theme = theme;
+      document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#0b1114" : "#edf2f1";
+
+      document.getElementById("lang-fr").setAttribute("aria-pressed", String(language === "fr"));
+      document.getElementById("lang-en").setAttribute("aria-pressed", String(language === "en"));
+      document.getElementById("availability-text").textContent = t.availability;
+      document.getElementById("profile-role").textContent = t.role;
+      document.getElementById("profile-city").textContent = t.city;
+      document.getElementById("profile-bio").textContent = t.bio;
+      document.getElementById("work-heading").firstChild.textContent = t.workHeading + " ";
+      const hasSocialLinks = Boolean(PROFILE.linkedin || PROFILE.instagram || PROFILE.tiktok);
+      document.getElementById("work-heading").querySelector("span").textContent = hasSocialLinks ? t.workHint : "";
+      document.getElementById("contact-heading").firstChild.textContent = t.contactHeading + " ";
+      document.getElementById("contact-heading").querySelector("span").textContent = t.contactHint;
+      document.getElementById("save-label").textContent = t.save;
+      document.getElementById("save-label-compact").textContent = t.saveShort;
+      document.getElementById("share-label").textContent = t.share;
+      document.getElementById("save-contact").setAttribute("aria-label", t.save);
+      document.getElementById("share-card").setAttribute("aria-label", t.share);
+      document.getElementById("print-label").textContent = t.print;
+      document.getElementById("print-card").setAttribute("aria-label", t.print);
+      document.getElementById("print-card").title = t.print;
+
+      const themeToggle = document.getElementById("theme-toggle");
+      const nextThemeLabel = theme === "dark" ? t.themeToLight : t.themeToDark;
+      themeToggle.setAttribute("aria-label", nextThemeLabel);
+      themeToggle.title = nextThemeLabel;
+      themeToggle.replaceChildren(makeIcon(theme === "dark" ? "sun" : "moon"));
+
+      document.getElementById("first-name").textContent = PROFILE.firstName;
+      document.getElementById("last-name").textContent = PROFILE.lastName;
+      document.getElementById("avatar").src = PROFILE.photo;
+      document.getElementById("avatar").alt = PROFILE.firstName + " " + PROFILE.lastName;
+      document.getElementById("footer-name").textContent = PROFILE.firstName + " " + PROFILE.lastName;
+      document.getElementById("footer-location").textContent = t.footerCity;
+
+      const workItems = [
+        { key: "portfolio", href: PROFILE.portfolio, display: PROFILE.portfolioDisplay },
+        { key: "linkedin", href: PROFILE.linkedin, display: PROFILE.linkedinDisplay },
+        { key: "instagram", href: PROFILE.instagram, display: PROFILE.instagramDisplay },
+        { key: "tiktok", href: PROFILE.tiktok, display: PROFILE.tiktokDisplay }
+      ];
+      const contactItems = [
+        { key: "phone", href: "tel:" + PROFILE.phone, display: PROFILE.phoneDisplay }
+      ];
+
+      PROFILE.whatsapp.forEach(function (contact) {
+        const region = language === "fr" ? contact.regionFr : contact.regionEn;
+        const digits = contact.number.replace(/\D/g, "");
+        contactItems.push({
+          key: "whatsapp",
+          label: t.labels.whatsapp + " · " + region,
+          href: "https://wa.me/" + digits,
+          display: contact.display
+        });
+      });
+      contactItems.push({ key: "email", href: "mailto:" + PROFILE.email, display: PROFILE.emailDisplay });
+
+      renderList("work-links", workItems, t);
+      renderList("contact-links", contactItems, t);
+      document.title = PROFILE.firstName + " " + PROFILE.lastName + " — " + t.role;
+    }
+
+    function escapeVCard(value) {
+      return String(value || "").replace(/\\/g, "\\\\").replace(/\r?\n/g, "\\n").replace(/,/g, "\\,").replace(/;/g, "\\;");
+    }
+
+    function downloadContact() {
+      const fullName = PROFILE.firstName + " " + PROFILE.lastName;
+      const t = TEXT[language];
+      const phoneNumbers = [PROFILE.phone].concat(PROFILE.whatsapp.map(function (item) { return item.number; }));
+      const uniqueNumbers = Array.from(new Set(phoneNumbers.map(function (number) { return number.replace(/\D/g, ""); })));
+      const vcard = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        "N:" + escapeVCard(PROFILE.lastName) + ";" + escapeVCard(PROFILE.firstName) + ";;;",
+        "FN:" + escapeVCard(fullName),
+        "TITLE:" + escapeVCard(t.role),
+        ...uniqueNumbers.map(function (number) { return "TEL;TYPE=CELL,VOICE:+" + number; }),
+        "EMAIL;TYPE=INTERNET:" + escapeVCard(PROFILE.email),
+        "URL:" + escapeVCard(PROFILE.portfolio),
+        "ADR;TYPE=WORK:;;Casablanca;;;Maroc",
+        "END:VCARD"
+      ].join("\r\n");
+
+      const blobUrl = URL.createObjectURL(new Blob([vcard], { type: "text/vcard;charset=utf-8" }));
+      const download = document.createElement("a");
+      download.href = blobUrl;
+      download.download = "Gabriel-Endam-Engone.vcf";
+      document.body.appendChild(download);
+      download.click();
+      download.remove();
+      window.setTimeout(function () { URL.revokeObjectURL(blobUrl); }, 1000);
+      showToast(t.saved);
+    }
+
+    async function shareCard() {
+      const t = TEXT[language];
+      const url = window.location.href;
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: PROFILE.firstName + " " + PROFILE.lastName, text: t.shareText, url: url });
+          showToast(t.shared);
+          return;
+        } catch (error) {
+          if (error && error.name === "AbortError") return;
+        }
+      }
+
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(url);
+          showToast(t.copied);
+          return;
+        }
+      } catch (error) { /* Continuer vers le secours manuel ci-dessous. */ }
+
+      window.prompt(t.shareUnavailable, url);
+    }
+
+    document.getElementById("lang-fr").addEventListener("click", function () {
+      language = "fr";
+      savePreference("contact-card-language", language);
+      render();
+    });
+    document.getElementById("lang-en").addEventListener("click", function () {
+      language = "en";
+      savePreference("contact-card-language", language);
+      render();
+    });
+    document.getElementById("theme-toggle").addEventListener("click", function () {
+      theme = theme === "dark" ? "light" : "dark";
+      savePreference("contact-card-theme", theme);
+      render();
+    });
+    document.getElementById("save-contact").addEventListener("click", downloadContact);
+    document.getElementById("share-card").addEventListener("click", shareCard);
+    document.getElementById("print-card").addEventListener("click", function () { window.print(); });
+
+    render();
+  </script>
+</body>
+</html>
