@@ -13,13 +13,13 @@
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Gabriel Endam’Engone — Développeur front-end & designer UI">
   <meta property="og:description" content="Développeur front-end et designer UI à Casablanca. Portfolio, coordonnées et liens directs.">
-  <meta property="og:image" content="https://gabrielhalim-dev.com/img/gabriel-portrait-2026.png">
+  <meta property="og:image" content="https://gabrielhalim-dev.com/img/gabriel-polo-nuit.png">
   <meta property="og:image:alt" content="Portrait de Gabriel Endam’Engone">
   <meta property="og:url" content="https://gabrielhalim-dev.com/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Gabriel Endam’Engone — Développeur front-end & designer UI">
   <meta name="twitter:description" content="Développeur front-end et designer UI à Casablanca. Portfolio, coordonnées et liens directs.">
-  <meta name="twitter:image" content="https://gabrielhalim-dev.com/img/gabriel-portrait-2026.png">
+  <meta name="twitter:image" content="https://gabrielhalim-dev.com/img/gabriel-polo-nuit.png">
   <meta name="twitter:image:alt" content="Portrait de Gabriel Endam’Engone">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22%3E%3Crect width=%22512%22 height=%22512%22 rx=%22120%22 fill=%22%230b1114%22/%3E%3Cg transform=%22translate(36 40)%22 fill=%22%23ffffff%22%3E%3Cpath d=%22M70 314V106h66v142Z%22/%3E%3Cpath d=%22M164 314V164h66v84Z%22/%3E%3Cpath d=%22M258 314V70h112v66h-46v112Z%22/%3E%3C/g%3E%3C/svg%3E">
@@ -32,7 +32,7 @@
       "name": "Gabriel Endam’Engone",
       "jobTitle": "Développeur front-end et designer UI",
       "url": "https://gabrielhalim-dev.com/",
-      "image": "https://gabrielhalim-dev.com/img/gabriel-portrait-2026.png",
+      "image": "https://gabrielhalim-dev.com/img/gabriel-polo-nuit.png",
       "email": "mailto:gabrielendamengone@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -54,7 +54,6 @@
       --line: rgba(226, 239, 238, .11);
       --accent: #79d8c1;
       --accent-ink: #08211c;
-      --status: #7ad6a2;
       --focus: #9ae7d6;
       --brand-ink: #ffffff;
       --shadow: 0 28px 84px rgba(0, 0, 0, .3);
@@ -71,7 +70,6 @@
       --line: rgba(16, 40, 44, .12);
       --accent: #176b5d;
       --accent-ink: #ffffff;
-      --status: #168354;
       --focus: #075f53;
       --brand-ink: #071d32;
       --shadow: 0 24px 70px rgba(19, 47, 47, .12);
@@ -230,65 +228,29 @@
 
     .theme-toggle:hover, .languages button:hover { color: var(--text); }
 
-    .profile { text-align: center; }
+    .profile { text-align: left; }
+
+    .profile-main { display: grid; gap: 22px; }
 
     .portrait-frame {
-      position: relative;
-      display: grid;
-      width: 128px;
-      height: 128px;
-      place-items: center;
-      margin: 0 auto 22px;
-      border: 1px solid rgba(121, 216, 193, .48);
-      border-radius: 50%;
+      width: 100%;
+      aspect-ratio: 1.5 / 1;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 17px;
       background: var(--surface-raised);
-      box-shadow: 0 12px 38px rgba(0, 0, 0, .24);
-    }
-
-    .portrait-frame::after {
-      position: absolute;
-      right: 3px;
-      bottom: 5px;
-      width: 15px;
-      height: 15px;
-      border: 3px solid var(--surface);
-      border-radius: 50%;
-      background: var(--status);
-      content: "";
+      box-shadow: 0 16px 38px rgba(0, 0, 0, .16);
     }
 
     .avatar {
       display: block;
-      width: 112px;
-      height: 112px;
-      border: 2px solid var(--surface);
-      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 0;
       object-fit: cover;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
-    }
-
-    .availability {
-      display: inline-flex;
-      min-height: 32px;
-      align-items: center;
-      gap: 8px;
-      margin: 0 0 14px;
-      padding: 4px 11px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--surface-raised);
-      color: var(--text);
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .availability-dot {
-      width: 7px;
-      height: 7px;
-      flex: 0 0 auto;
-      border-radius: 50%;
-      background: var(--status);
-      box-shadow: 0 0 0 3px color-mix(in srgb, var(--status) 15%, transparent);
+      object-position: 70% center;
     }
 
     h1 {
@@ -322,7 +284,7 @@
 
     .bio {
       max-width: 39ch;
-      margin: 17px auto 0;
+      margin: 17px 0 0;
       color: var(--muted);
       font-size: 15px;
       line-height: 1.65;
@@ -544,10 +506,9 @@
       .contact-card::before { left: 30px; width: 82px; }
       .utility-bar { margin-bottom: 39px; }
       .profile { text-align: left; }
-      .profile-main { display: flex; align-items: center; gap: 23px; }
-      .portrait-frame { width: 128px; height: 128px; flex: 0 0 auto; margin: 0; }
+      .profile-main { gap: 24px; }
+      .portrait-frame { aspect-ratio: 1.85 / 1; }
       .profile-copy { min-width: 0; }
-      .availability { margin-bottom: 12px; }
       h1 { font-size: clamp(38px, 6.2vw, 50px); }
       .role { margin-top: 14px; }
       .bio { max-width: 42ch; margin-left: 0; }
@@ -716,10 +677,9 @@
         <div class="profile">
           <div class="profile-main">
             <div class="portrait-frame">
-              <img src="img/gabriel-portrait-2026.png" alt="Gabriel Endam’Engone" class="avatar" id="avatar" width="112" height="112" fetchpriority="high">
+              <img src="img/gabriel-polo-nuit.png" alt="Gabriel Endam’Engone" class="avatar" id="avatar" fetchpriority="high">
             </div>
             <div class="profile-copy">
-              <p class="availability"><span class="availability-dot" aria-hidden="true"></span><span id="availability-text">Disponible pour de nouveaux projets</span></p>
               <h1 id="profile-name"><span id="first-name">Gabriel</span><span id="last-name">Endam’Engone</span></h1>
               <p class="role" id="profile-role">Développeur front-end et designer UI</p>
               <p class="city"><svg class="icon" aria-hidden="true"><use href="#icon-pin"></use></svg><span id="profile-city">Casablanca, Maroc</span></p>
@@ -806,12 +766,11 @@
       tiktok: "",
       tiktokDisplay: "",
 
-      photo: "img/gabriel-portrait-2026.png",
+      photo: "img/gabriel-polo-nuit.png",
     };
 
     const TEXT = {
       fr: {
-        availability: "Disponible pour de nouveaux projets",
         role: PROFILE.roleFr,
         city: PROFILE.cityFr,
         bio: PROFILE.bioFr,
@@ -842,7 +801,6 @@
         footerCity: "Casablanca · Maroc"
       },
       en: {
-        availability: "Open to new projects",
         role: PROFILE.roleEn,
         city: PROFILE.cityEn,
         bio: PROFILE.bioEn,
@@ -965,7 +923,6 @@
 
       document.getElementById("lang-fr").setAttribute("aria-pressed", String(language === "fr"));
       document.getElementById("lang-en").setAttribute("aria-pressed", String(language === "en"));
-      document.getElementById("availability-text").textContent = t.availability;
       document.getElementById("profile-role").textContent = t.role;
       document.getElementById("profile-city").textContent = t.city;
       document.getElementById("profile-bio").textContent = t.bio;
